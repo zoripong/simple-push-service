@@ -8,6 +8,6 @@ class PushClientImpl(PushClient):
     def send(self, message: PushMessage):
         print(
             f'[{self.url}]: '
-            f'{message.sender_name}가 {message.receiver_id}에게 '
+            f'{message.sender_id}가 {message.receiver_id}에게 '
             f'{message.content}에 {message.content} 전송'
         )

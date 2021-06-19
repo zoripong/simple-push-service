@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\005./rpc',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\npush.proto\x12\x03rpc\"b\n\x14PushInstantlyRequest\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t\x12\x13\n\x0bsender_name\x18\x02 \x01(\t\x12\x13\n\x0breceiver_id\x18\x03 \x01(\x03\x12\x0f\n\x07send_at\x18\x04 \x01(\x03\"(\n\x15PushInstantlyResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x32W\n\x0bPushService\x12H\n\rPushInstantly\x12\x19.rpc.PushInstantlyRequest\x1a\x1a.rpc.PushInstantlyResponse\"\x00\x42\x07Z\x05./rpcb\x06proto3'
+  serialized_pb=b'\n\npush.proto\x12\x03rpc\"f\n\x14PushInstantlyRequest\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\t\x12\x13\n\x0breceiver_id\x18\x03 \x01(\x03\x12\x0f\n\x07send_at\x18\x04 \x01(\x03\x12\x11\n\tsender_id\x18\x05 \x01(\x03J\x04\x08\x02\x10\x03\"(\n\x15PushInstantlyResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x32W\n\x0bPushService\x12H\n\rPushInstantly\x12\x19.rpc.PushInstantlyRequest\x1a\x1a.rpc.PushInstantlyResponse\"\x00\x42\x07Z\x05./rpcb\x06proto3'
 )
 
 
@@ -41,22 +41,22 @@ _PUSHINSTANTLYREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sender_name', full_name='rpc.PushInstantlyRequest.sender_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='receiver_id', full_name='rpc.PushInstantlyRequest.receiver_id', index=2,
+      name='receiver_id', full_name='rpc.PushInstantlyRequest.receiver_id', index=1,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='send_at', full_name='rpc.PushInstantlyRequest.send_at', index=3,
+      name='send_at', full_name='rpc.PushInstantlyRequest.send_at', index=2,
       number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='sender_id', full_name='rpc.PushInstantlyRequest.sender_id', index=3,
+      number=5, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -74,7 +74,7 @@ _PUSHINSTANTLYREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=19,
-  serialized_end=117,
+  serialized_end=121,
 )
 
 
@@ -105,8 +105,8 @@ _PUSHINSTANTLYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=119,
-  serialized_end=159,
+  serialized_start=123,
+  serialized_end=163,
 )
 
 DESCRIPTOR.message_types_by_name['PushInstantlyRequest'] = _PUSHINSTANTLYREQUEST
@@ -137,8 +137,8 @@ _PUSHSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=161,
-  serialized_end=248,
+  serialized_start=165,
+  serialized_end=252,
   methods=[
   _descriptor.MethodDescriptor(
     name='PushInstantly',

@@ -12,9 +12,9 @@ from app.rpc.push_pb2_grpc import PushServiceServicer
 class PushMessage:
     content: str
 
-    sender_name: str
-
     send_at: datetime.datetime
+
+    sender_id: int
 
     receiver_id: int
 
@@ -34,7 +34,7 @@ class PushServiceImpl(PushServiceServicer):
         self.client.send(
             PushMessage(
                 content=request.content,
-                sender_name=request.sender_name,
+                sender_id=request.sender_id,
                 send_at=datetime.datetime.utcfromtimestamp(request.send_at),
                 receiver_id=request.receiver_id,
             )
